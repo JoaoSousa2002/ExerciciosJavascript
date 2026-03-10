@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio03</title>
+</head>
+<body>
+
+    <p style="display: inline;">Digite o valor da compra: </p>
+    <input type="number" id="ValorCompra" min="0"><br>
+    
+<form>
+  <fieldset>
+    <legend>Selecione o metodo de pagamento:</legend>
+    <div>
+      <input type="radio" id="aVista" name="Pagamento" value="aVista" checked onchange="VerificarMetodoPagamento()" />
+      <label for="contactChoice1">A vista</label>
+
+      <input type="radio" id="aPrazo" name="Pagamento" value="aPrazo" onchange="VerificarMetodoPagamento()" />
+      <label for="contactChoice2">A Prazo</label>
+
+    </div>
+
+    <div id="parcelas" style="display: none;">
+    <br>
+    <label>
+      Quantidade de parcelas:
+      <input type="number" id="qtdParcelas" min="1" max="3" value="1">
+    </label>
+  </div>
+
+  </fieldset>
+</form>
+
+<input type="button" value="Calcular" onclick="console.log(VerificarMetodoPagamento()); Calcular()" style="cursor: pointer;"><br>
+
+<p style="display: inline;">Resultado: </p>
+<p style="display: inline;" id="Resultado">aaa</p>
+
+<p></p>
+
+    <script src="Exercicio03.js"></script>
+</body>
+</html>
