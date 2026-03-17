@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+
+<body>
+
+    <h1>É impar ou par?</h1>
+
+
+
+    <label for="ValorUser">Digite um número:
+        <input type="number" id="ValorUser">
+    </label>
+    <input type="button" id="BotaoPensar" value="Pensar..." onclick="Pensar()">
+    <br><br>
+
+    <h2 style="display: inline;"><b>Resultado:</b></h2>
+    <h2 style="display: inline;" id="Resultado"> </h2>
+
+    <script>
+        function Pensar() {
+
+            let numero = Number(document.getElementById("ValorUser").value);
+
+            if (numero % 2 == 0) {
+                document.getElementById("Resultado").innerText = "O número é par";
+            } else {
+                document.getElementById("Resultado").innerText = "O número é ímpar";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 3</title>
+</head>
+<style>
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+</style>
+
+<body>
+
+  <h1>Calcular triangulo</h1>
+
+  <label for="DivInputsNumbers">Digite os numeros:</label>
+  <div id="DivInputsNumbers" style="display: inline;">
+    <input style="width: 50px;" type="number" id="Valor01">
+    <input style="width: 50px;" type="number" id="Valor02">
+    <input style="width: 50px;" type="number" id="Valor03">
+  </div><br>
+  <button onclick="CalcularTriangulo()">Calcular</button>
+
+  <p id="Resultado"></p>
+
+
+  <script>
+    function CalcularTriangulo() {
+      let Valor01 = Number(document.getElementById("Valor01").value);
+      let Valor02 = Number(document.getElementById("Valor02").value);
+      let Valor03 = Number(document.getElementById("Valor03").value);
+
+      if (Valor01 == Valor02 && Valor02 == Valor03) {
+        document.getElementById("Resultado").innerText = "É um triângulo equilátero";
+
+      } else if (Valor01 == Valor02 || Valor02 == Valor03 || Valor01 == Valor03) {
+        document.getElementById("Resultado").innerText = "É um triângulo isósceles";
+
+      } else {
+        document.getElementById("Resultado").innerText = "É um triângulo escaleno";
+      }
+    }
+  </script>
+</body>
+
+</html>
